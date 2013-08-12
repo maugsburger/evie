@@ -1,0 +1,20 @@
+#!/bin/bash
+
+git diff --cached --name-status | while read st file; do
+        # skip deleted files
+        if [ "$st" == 'D' ]; then continue; fi
+        # create images of board and schematics
+        if [[ "$file" =~ \.sch$ ]]; then
+            ~/bin/eagle-6.4.0/bin/eagle -C 'RUN export-images batch sch' "${file}"
+            for img in ${file/%.sch/_sheet*}; do
+                convert "$img" -trim "$img"
+                git add $img
+            done
+        elif [[ "$file" =~ \.brd$ ]]; then
+            ~/bin/eagle-6.4.0/bin/eagle -C 'RUN export-images batch brd' "${file}"
+            for img in  ${file/%.brd/_top.png} ${file/%.brd/_bot.png}; do
+                convert "$img" -trim "$img"
+                git add $img
+            done
+        fi
+done

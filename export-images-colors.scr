@@ -1,0 +1,231 @@
+# Changes the layer colors
+# 1 Top               Leiterbahnen oben
+SET COLOR_LAYER 1 4;
+SET FILL_LAYER 1 1;
+
+# 17 Pads             Pads (bedrahtete Bauteile)
+SET COLOR_LAYER 17 2;
+SET FILL_LAYER 17 1;
+
+# 18 Vias             Vias (durchgehend)
+SET COLOR_LAYER 18 3;
+SET FILL_LAYER 18 1;
+
+# 20 Dimension        Platinen-Umrisse (und Kreise für Holes)
+SET COLOR_LAYER 20 15;
+SET FILL_LAYER 20 1;
+
+# 21 tPlace           Bestückungsdruck oben
+SET COLOR_LAYER 21 7;
+SET FILL_LAYER 21 1;
+
+# 25 tNames           Servicedruck oben (Bauteile-Namen, NAME)
+SET COLOR_LAYER 25 7;
+SET FILL_LAYER 25 1;
+
+# 31 tCream           Lotpaste oben
+SET COLOR_LAYER 31 2;
+SET FILL_LAYER 31 1;
+
+# 33 tFinish          Veredelung oben
+SET COLOR_LAYER 33 6;
+SET FILL_LAYER 33 3;
+
+# 46 Milling          CNC-Fräser-Daten zum Schneiden der Plat.
+SET COLOR_LAYER 46 1;
+SET FILL_LAYER 46 1;
+
+# 49 Reference        Passermarken
+SET COLOR_LAYER 49 7;
+SET FILL_LAYER 49 1;
+
+set palette colored;
+# background
+set palette  0 0xFF3A3A3A;
+# milling
+set palette  1 0xEE333333;
+# pads and cream
+set palette  2 0xFFFFD700;
+# vias
+set palette  3 0xFF387d00;
+# top layer
+set palette  4 0xFF006400;
+# silk screen, passermarken
+set palette  7 0xA0FFFFFF;
+# umriss
+set palette 15 0xFF000000;
+
+# free
+set palette  5 0xFFFF0000;
+set palette  6 0xFFFF0000;
+set palette  8 0xFFFF0000;
+set palette  9 0xFFFF0000;
+set palette 10 0xFFFF0000;
+set palette 11 0xFFFF0000;
+set palette 12 0xFFFF0000;
+set palette 13 0xFFFF0000;
+set palette 14 0xFFFF0000;
+
+# # 2 Route2            Innenlage
+# SET COLOR_LAYER 2 1;
+# SET FILL_LAYER 2 3;
+# 
+# # 3 Route3            Innenlage
+# SET COLOR_LAYER 3 4;
+# SET FILL_LAYER 3 3;
+# 
+# # 4 Route4            Innenlage
+# SET COLOR_LAYER 4 1;
+# SET FILL_LAYER 4 4;
+# 
+# # 5 Route5            Innenlage
+# SET COLOR_LAYER 5 4;
+# SET FILL_LAYER 5 4;
+# 
+# # 6 Route6            Innenlage
+# SET COLOR_LAYER 6 1;
+# SET FILL_LAYER 6 8;
+# 
+# # 7 Route7            Innenlage
+# SET COLOR_LAYER 7 4;
+# SET FILL_LAYER 7 8;
+# 
+# # 8 Route8            Innenlage
+# SET COLOR_LAYER 8 1;
+# SET FILL_LAYER 8 2;
+# 
+# # 9 Route9            Innenlage
+# SET COLOR_LAYER 9 4;
+# SET FILL_LAYER 9 2;
+# 
+# # 10 Route10          Innenlage
+# SET COLOR_LAYER 10 1;
+# SET FILL_LAYER 10 7;
+# 
+# # 11 Route11          Innenlage
+# SET COLOR_LAYER 11 4;
+# SET FILL_LAYER 11 7;
+# 
+# # 12 Route12          Innenlage
+# SET COLOR_LAYER 12 1;
+# SET FILL_LAYER 12 5;
+# 
+# # 13 Route13          Innenlage
+# SET COLOR_LAYER 13 4;
+# SET FILL_LAYER 13 5;
+# 
+# # 14 Route14          Innenlage
+# SET COLOR_LAYER 14 1;
+# SET FILL_LAYER 14 6;
+# 
+# # 15 Route15          Innenlage
+# SET COLOR_LAYER 15 4;
+# SET FILL_LAYER 15 6;
+# 
+# # 16 Bottom           Leiterbahnen unten
+# SET COLOR_LAYER 16 4;
+# SET FILL_LAYER 16 1;
+# 
+# # 19 Unrouted         Luftlinien
+# SET COLOR_LAYER 19 6;
+# SET FILL_LAYER 19 1;
+#
+# # 22 bPlace           Bestückungsdruck unten
+# SET COLOR_LAYER 22 7;
+# SET FILL_LAYER 22 1;
+# 
+# # 23 tOrigins         Aufhängepunkte oben (Kreuz automatisch generiert)
+# SET COLOR_LAYER 23 15;
+# SET FILL_LAYER 23 1;
+# 
+# # 24 bOrigins         Aufhängepunkte unten (Kreuz automatisch generiert)
+# SET COLOR_LAYER 24 15;
+# SET FILL_LAYER 24 1;
+#
+# # 26 bNames           Servicedruck unten (Bauteile-Namen, NAME)
+# SET COLOR_LAYER 26 7;
+# SET FILL_LAYER 26 1;
+# 
+# # 27 tValues          Bauteile-Werte oben (VALUE)
+# SET COLOR_LAYER 27 7;
+# SET FILL_LAYER 27 1;
+# 
+# # 28 bValues          Bauteile-Werte unten (VALUE)
+# SET COLOR_LAYER 28 7;
+# SET FILL_LAYER 28 1;
+# 
+# # 29 tStop            Lötstopmaske oben (automatisch generiert)
+# SET COLOR_LAYER 29 7;
+# SET FILL_LAYER 29 3;
+# 
+# # 30 bStop            Lötstopmaske unten (automatisch generiert)
+# SET COLOR_LAYER 30 7;
+# SET FILL_LAYER 30 6;
+#
+# # 32 bCream           Lotpaste unten
+# SET COLOR_LAYER 32 2;
+# SET FILL_LAYER 32 1;
+# 
+# # 34 bFinish        Veredelung unten
+# SET COLOR_LAYER 34 6;
+# SET FILL_LAYER 34 6;
+# 
+# # 35 tGlue            Klebemaske oben
+# SET COLOR_LAYER 35 7;
+# SET FILL_LAYER 35 4;
+# 
+# # 36 bGlue            Klebemaske unten
+# SET COLOR_LAYER 36 7;
+# SET FILL_LAYER 36 5;
+# 
+# # 37 tTest            Test- und Abgleichinformationen oben
+# SET COLOR_LAYER 37 7;
+# SET FILL_LAYER 37 1;
+# 
+# # 38 bTest            Test- und Abgleichinformationen unten
+# SET COLOR_LAYER 38 7;
+# SET FILL_LAYER 38 1;
+# 
+# # 39 tKeepout         Sperrflächen für Bauteile oben
+# SET COLOR_LAYER 39 4;
+# SET FILL_LAYER 39 11;
+# 
+# # 40 bKeepout         Sperrflächen für Bauteile unten
+# SET COLOR_LAYER 40 1;
+# SET FILL_LAYER 40 11;
+# 
+# # 41 tRestrict        Sperrflächen für Leiterbahnen oben
+# SET COLOR_LAYER 41 4;
+# SET FILL_LAYER 41 10;
+# 
+# # 42 bRestrict        Sperrflächen für Leiterbahnen unten
+# SET COLOR_LAYER 42 1;
+# SET FILL_LAYER 42 10;
+# 
+# # 43 vRestrict        Sperrflächen für Vias
+# SET COLOR_LAYER 43 2;
+# SET FILL_LAYER 43 10;
+# 
+# # 44 Drills           Bohrungen, durchkontaktiert
+# SET COLOR_LAYER 44 7;
+# SET FILL_LAYER 44 1;
+# 
+# # 45 Holes            Bohrungen, nicht durchkontaktiert
+# SET COLOR_LAYER 45 7;
+# SET FILL_LAYER 45 1;
+# 
+# # 47 Measures         Bemaßungen
+# SET COLOR_LAYER 47 7;
+# SET FILL_LAYER 47 1;
+# 
+# # 48 Document         allgemeine Dokumentation
+# SET COLOR_LAYER 48 7;
+# SET FILL_LAYER 48 1;
+# 
+# # 51 tDocu            Bauteiledokumentation oben
+# SET COLOR_LAYER 51 7;
+# SET FILL_LAYER 51 1;
+# 
+# # 52 bDocu            Bauteiledokumentation unten
+# SET COLOR_LAYER 52 7;
+# SET FILL_LAYER 52 1;
