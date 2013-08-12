@@ -1,9 +1,10 @@
-egie
+evie
 ====
 
-Eagle Git Image Export
+Eagle VCS Image Export
 
-Create fancy images of your boards and schematic files prior to commiting then into your favourite VCS. 
+Create fancy images of your boards and schematic files prior to commiting then into your favourite VCS.
+Currently only git is supported, but it should be no problem to create a commit hook for your preferred VCS.
 
 These scripts take care that
 * The shown layers are always the same
