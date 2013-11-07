@@ -35,6 +35,10 @@ SET FILL_LAYER 31 1;
 SET COLOR_LAYER 33 6;
 SET FILL_LAYER 33 3;
 
+# 44 Drills           Bohrungen, durchkontaktiert
+SET COLOR_LAYER 44 2;
+SET FILL_LAYER 44 1;
+
 # 46 Milling          CNC-Fräser-Daten zum Schneiden der Plat.
 SET COLOR_LAYER 46 1;
 SET FILL_LAYER 46 1;
@@ -42,6 +46,10 @@ SET FILL_LAYER 46 1;
 # 49 Reference        Passermarken
 SET COLOR_LAYER 49 7;
 SET FILL_LAYER 49 1;
+
+# 100 DrillBG         Hintergrund in Bohrungen
+SET COLOR_LAYER 100 0;
+SET FILL_LAYER 100 1;
 
 set palette colored;
 # background
