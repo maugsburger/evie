@@ -121,22 +121,76 @@ if ( forcefile == 2 || ( forcefile == 0 && board )) project.board(B) {
     }
     cmd += ";";
     */
+    /* LAYERS:
+     *
+     * 1 Top            Leiterbahnen oben
+     * 2 Route2         Innenlage
+     * 3 Route3         Innenlage
+     * 4 Route4         Innenlage
+     * 5 Route5         Innenlage
+     * 6 Route6         Innenlage
+     * 7 Route7         Innenlage
+     * 8 Route8         Innenlage
+     * 9 Route9         Innenlage
+     * 10 Route10       Innenlage
+     * 11 Route11       Innenlage
+     * 12 Route12       Innenlage
+     * 13 Route13       Innenlage
+     * 14 Route14       Innenlage
+     * 15 Route15       Innenlage
+     * 16 Bottom        Leiterbahnen unten
+     * 17 Pads          Pads (bedrahtete Bauteile)
+     * 18 Vias          Vias (durchgehend)
+     * 19 Unrouted      Luftlinien
+     * 20 Dimension     Platinen-Umrisse (und Kreise für Holes)
+     * 21 tPlace        Bestückungsdruck oben
+     * 22 bPlace        Bestückungsdruck unten
+     * 23 tOrigins      Aufhängepunkte oben (Kreuz automatisch generiert)
+     * 24 bOrigins      Aufhängepunkte unten (Kreuz automatisch generiert)
+     * 25 tNames        Servicedruck oben (Bauteile-Namen, NAME)
+     * 26 bNames        Servicedruck unten (Bauteile-Namen, NAME)
+     * 27 tValues       Bauteile-Werte oben (VALUE)
+     * 28 bValues       Bauteile-Werte unten (VALUE)
+     * 29 tStop         Lötstopmaske oben (automatisch generiert)
+     * 30 bStop         Lötstopmaske unten (automatisch generiert)
+     * 31 tCream        Lotpaste oben
+     * 32 bCream        Lotpaste unten
+     * 33 tFinish       Veredelung oben
+     * 34 bFinish       Veredelung unten
+     * 35 tGlue         Klebemaske oben
+     * 36 bGlue         Klebemaske unten
+     * 37 tTest         Test- und Abgleichinformationen oben
+     * 38 bTest         Test- und Abgleichinformationen unten
+     * 39 tKeepout      Sperrflächen für Bauteile oben
+     * 40 bKeepout      Sperrflächen für Bauteile unten
+     * 41 tRestrict     Sperrflächen für Leiterbahnen oben
+     * 42 bRestrict     Sperrflächen für Leiterbahnen unten
+     * 43 vRestrict     Sperrflächen für Vias
+     * 44 Drills        Bohrungen, durchkontaktiert
+     * 45 Holes         Bohrungen, nicht durchkontaktiert
+     * 46 Milling       CNC-Fräser-Daten zum Schneiden der Plat.
+     * 47 Measures      Bemaßungen
+     * 48 Document      allgemeine Dokumentation
+     * 49 Reference     Passermarken
+     * 51 tDocu         Bauteiledokumentation oben
+     * 52 bDocu         Bauteiledokumentation unten
+     */
     // load export colors
     cmd += "\nSCRIPT export-images-colors;";
-    cmd += "\nSET Option.LayerSequence 21 25 31 17 18 1 20 16;";
+    cmd += "\nSET Option.LayerSequence 44 21 25 31 17 18 1 29 20 16;";
     // top layer
-    cmd += "\nDISPLAY NONE 1 17 18 20 21 25 31 46;";
+    cmd += "\nDISPLAY NONE 1 17 18 20 21 25 29 31 44 46;";
     cmd += "\nWINDOW;";
     cmd += "\nRATSNEST;";
     cmd += mkimage(basefilename + "_top");
     // bottom layer
-    cmd += "\nDISPLAY NONE 1 16 17 18 20 21 22 23 24 25 26 39 40 41 42 44 45 46 47 48 49;";
+    cmd += "\nDISPLAY NONE 1 16 17 18 20 21 22 23 24 25 26 29 30 39 40 41 42 44 45 46 47 48 49;";
     cmd += "\nWINDOW FIT;";
     cmd += "\nGROUP ALL;";
     cmd += "\nLOCK (CS> 0 0 );";
     cmd += "\nMIRROR (C> 0 0);";
     cmd += "\nGROUP;";
-    cmd += "\nDISPLAY NONE 1 17 18 20 21 25 31 46;";
+    cmd += "\nDISPLAY NONE 1 17 18 20 21 25 29 31 44 46;";
     cmd += "\nWINDOW;";
     cmd += "\nRATS;";
     cmd += mkimage(basefilename + "_bot");

@@ -23,6 +23,10 @@ SET FILL_LAYER 21 1;
 SET COLOR_LAYER 25 7;
 SET FILL_LAYER 25 1;
 
+# 29 tStop            Lötstopmaske oben (automatisch generiert)
+SET COLOR_LAYER 29 5;
+SET FILL_LAYER 29 1;
+
 # 31 tCream           Lotpaste oben
 SET COLOR_LAYER 31 2;
 SET FILL_LAYER 31 1;
@@ -50,13 +54,14 @@ set palette  2 0xFFFFD700;
 set palette  3 0xFF387d00;
 # top layer
 set palette  4 0xFF006400;
+# tStop (bare pcb)
+set palette  5 0xFFB5B34D;
 # silk screen, passermarken
 set palette  7 0xA0FFFFFF;
 # umriss
 set palette 15 0xFF000000;
 
 # free
-set palette  5 0xFFFF0000;
 set palette  6 0xFFFF0000;
 set palette  8 0xFFFF0000;
 set palette  9 0xFFFF0000;
