@@ -13,10 +13,7 @@ These scripts take care that
 
 ## Installation
 
-1. copy `export-images.ulp` into your `<eagle install dir>/ulp` (or any other ulp path set in your eagle config)
-1. copy `export-images-colors.scr` into your `<eagle install dir>/scr` (or any other scr path set in your eagle config)
-1. adjust the eagle binary path inside `git-pre-commit`
-1. rename and copy `git-pre-commit` to your `<project>/.git/hooks/pre-commit`
+TBD
 
 ## Usage
 
